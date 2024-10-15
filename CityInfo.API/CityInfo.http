@@ -1,0 +1,21 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+@schema=https
+@hostname=localhost
+@port=7043
+
+GET {{schema}}://{{hostname}}:{{port}}/api/cities
+
+###
+
+GET {{schema}}://{{hostname}}:{{port}}/api/cities
+Accept:application/xml
+
+###
+POST {{schema}}://{{hostname}}:{{port}}/api/cities/1/pointofinterest
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "A name for testing",
+  "description": "A description for testing"
+}

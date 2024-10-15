@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CityInfo.API.Controllers
 {
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [Route("api/cities")]
     public class CitiesController: ControllerBase
     {
@@ -43,6 +43,12 @@ namespace CityInfo.API.Controllers
             //return Ok(_citiesDataStore.Cities);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="includePointOfInterest"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCity(int id, bool includePointOfInterest)
         {
